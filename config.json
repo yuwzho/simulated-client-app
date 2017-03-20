@@ -1,0 +1,6 @@
+{
+  "interval": 2000,
+  "deviceId": "Raspberry Pi Node",
+  "messageMax": 256,
+  "credentialPath": "~/.iot-hub"
+}
