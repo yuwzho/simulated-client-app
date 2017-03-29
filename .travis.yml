@@ -6,8 +6,8 @@ branches:
   only:
     - master
   
-install:
-  - npm install --only=dev
-  
+before_install:
+  - sed -i -e 's/"autotest": false/"autotest": true/g' .test.config.json
+
 matrix:
   fast_finish: true
