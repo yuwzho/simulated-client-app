@@ -4,7 +4,10 @@
   "description": "Client application for Raspberry Pi collect temperature and humidity data from BME280, then interactive with Azure IoT hub",
   "main": "index.js",
   "scripts": {
-    "test": "node_modules/.bin/eslint *.js"
+    "lint": "node_modules/.bin/eslint *.js",
+    "submodule": "git submodule init && git submodule update",
+    "e2e": "cd client-app-test && npm install && npm test",
+    "test": "npm run lint && npm run submodule && npm run e2e"
   },
   "dependencies": {
     "azure-iot-device": "^1.1.7",
